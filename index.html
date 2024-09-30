@@ -1,0 +1,669 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <title>Admin Dashbord Template</title>
+</head>
+
+<body class="bg-light">
+    <!-- navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark p-0 fixed-top">
+        <div class="container-fluid">
+            <!-- offcanvasTriggerbtn -->
+            <button class="btn d-lg-none fs-4 " type="button" data-bs-toggle="offcanvas"
+                data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <!-- offcanvasTriggerbtn -->
+            <a class="navbar-brand fw-bold text-info " id="adminLogo" href="#">Admin Dashbord</a>
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="bi bi-search"></span>
+            </button>
+            <div class="collapse navbar-collapse " id="navbarSupportedContent">
+
+                <form class="d-flex -auto my-lg-2 mt-2 w-50" id="searchForm">
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="search..." aria-label="search..."
+                            aria-describedby="basic-addon2">
+                        <span class="input-group-text bg-info" id="basic-addon2"><i class="bi bi-search"></i></span>
+                    </div>
+                </form>
+                <ul class="navbar-nav align-items-lg-center align-items-center flex-row ms-auto my-lg-2 mt-2">
+
+                    <li class="nav-item mx-2">
+                        <a class="nav-link active" aria-current="page" href="#"><img src="./images/location.png" alt=""
+                                class="img-fluid" width="40px"></a>
+                    </li>
+                    <li class="nav-item mx-2">
+                        <a class="nav-link active" aria-current="page" href="#"><i
+                                class="bi bi-bell-fill fs-4 text-info"></i></a>
+                    </li>
+                    <li class="nav-item mx-2">
+                        <a class="nav-link active" aria-current="page" href="#">
+                            <i class="bi bi-person-square fs-4 text-info"></i></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- navbar -->
+
+    <!-- collpsable sidebark -->
+    <div>
+        <h1>hello</h1>
+    </div>
+
+    <!-- collpsable sidebark -->
+
+    <!-- offcanvas -->
+    <div class="offcanvas offcanvas-start bg-dark  position-fixed start-0 sidebar" tabindex="-1" id="offcanvasExample"
+        aria-labelledby="offcanvasExampleLabel">
+        <div class="offcanvas-header d-lg-none ">
+            <i class="bi bi-x-lg text-light ms-auto" type="button" class=" d-lg-none" data-bs-dismiss="offcanvas"></i>
+
+        </div>
+        <div class="offcanvas-body" style="scrollbar-width: none;">
+            <div>
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <div class="text-muted  text-uppercase small fw-bold">APPLICATION</div>
+                    </li>
+                    <li class="nav-item">
+                        <a href="" class="nav-link text-white  active">
+                            <span><i class="bi bi-speedometer2 me-2"></i> Dashbord</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="" class="nav-link text-white active d-flex align-items-center justify-content-between"
+                            type="button" data-bs-toggle="collapse" data-bs-target="#catalogcollapse"
+                            aria-expanded="false" aria-controls="catalogcollapse">
+                            <span><i class="bi bi-stack me-2"></i> Catalog</span>
+                            <span><i class="bi bi-caret-down-fill text-white "></i></span>
+                        </a>
+                    </li>
+                    <div class="collapse" id="catalogcollapse">
+                        <ul class="navbar-nav">
+                            <li>
+                                <a href="" class="dropdown-item text-white ms-2">
+                                    Product List
+                                </a>
+                            </li>
+                            <li>
+                                <a href="" class="dropdown-item text-white ms-2">
+                                    Categories List
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <li class="nav-item">
+                        <a href="" class="nav-link text-white active d-flex align-items-center justify-content-between"
+                            type="button" data-bs-toggle="collapse" data-bs-target="#cstomerscollapse"
+                            aria-expanded="false" aria-controls="collapseExample">
+                            <span><i class="bi bi-person me-2"></i> Customers</span>
+                            <span><i class="bi bi-caret-down-fill text-white "></i></span>
+                        </a>
+                    </li>
+                    <div class="collapse" id="cstomerscollapse">
+                        <ul class="navbar-nav">
+
+                            <li>
+                                <a href="" class="dropdown-item text-white ms-2">
+                                    Customers List
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <li class="nav-item">
+                        <a href="" class="nav-link text-white active d-flex align-items-center justify-content-between"
+                            type="button" data-bs-toggle="collapse" data-bs-target="#Orderscollapse"
+                            aria-expanded="false" aria-controls="Orderscollapse">
+                            <span><i class="bi bi-cart2 me-2"></i> Orders</span>
+                            <span id="dropdown"><i class="bi bi-caret-down-fill text-white"></i></span>
+                        </a>
+                    </li>
+                    <div class="collapse" id="Orderscollapse">
+                        <ul class="navbar-nav">
+                            <li>
+                                <a href="" class="dropdown-item text-white ms-2">
+                                    Order List
+                                </a>
+                            </li>
+                            <li>
+                                <a href="" class="dropdown-item text-white ms-2">
+                                    Order Details
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <li class="nav-item">
+                        <a href="" class="nav-link text-white active d-flex align-items-center justify-content-between">
+                            <span><i class="bi bi-envelope me-2"></i> Inbox</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="" class="nav-link text-white active d-flex align-items-center justify-content-between">
+                            <span><i class="bi bi-chat me-2"></i> Chat</span>
+                            <span class=" btn btn-warning py-0 text-white">8</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="" class="nav-link text-white active d-flex align-items-center justify-content-between">
+                            <span><i class="bi bi-calendar3 me-2"></i> Calender</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="" class="nav-link text-white active d-flex align-items-center justify-content-between">
+                            <span><i class="bi bi-bar-chart me-2"></i> Analytics</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="" class="nav-link text-white active d-flex align-items-center justify-content-between">
+                            <span><i class="bi bi-gear me-2"></i> Setting</span>
+                        </a>
+                    </li>
+                    <li>
+                        <hr class="text-light">
+                    </li>
+                    <li class="nav-item">
+                        <div class=" text-muted text-uppercase small fw-bold">PAGES</div>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="" class="nav-link text-white active d-flex align-items-center justify-content-between"
+                            type="button" data-bs-toggle="collapse" data-bs-target="#Authenticationcollapse"
+                            aria-expanded="false" aria-controls="Authenticationcollapse">
+                            <span><i class="bi bi-lock-fill me-2"></i> Authentication</span>
+                            <span><i class="bi bi-caret-down-fill text-white "></i></span>
+                        </a>
+                    </li>
+                    <div class="collapse" id="Authenticationcollapse">
+                        <ul class="navbar-nav">
+                            <li>
+                                <a href="SignIn.html" class="dropdown-item text-white ms-2">
+                                    Sign In
+                                </a>
+                            </li>
+                            <li>
+                                <a href="SignUp.html" class="dropdown-item text-white ms-2">
+                                    Sign Up
+                                </a>
+                            </li>
+                            <li>
+                                <a href="forgotPassword.html" class="dropdown-item text-white ms-2">
+                                    Forgot Password
+                                </a>
+                            </li>
+                            <li>
+                                <a href="" class="dropdown-item text-white ms-2">
+                                    Reset Password
+                                </a>
+                            </li>
+                            <li>
+                                <a href="" class="dropdown-item text-white ms-2">
+                                    Verify Account
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <li class="nav-item">
+                        <a href="" class="nav-link text-white active d-flex align-items-center justify-content-between">
+                            <span><i class="bi bi-receipt me-2"></i> Invoice</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="pricing.html"
+                            class="nav-link text-white active d-flex align-items-center justify-content-between">
+                            <span><i class="bi bi-currency-rupee me-2"></i> Pricing Table</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="" class="nav-link text-white active d-flex align-items-center justify-content-between">
+                            <span><i class="bi bi-exclamation-circle me-2"></i> FAQ</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="" class="nav-link text-white active d-flex align-items-center justify-content-between">
+                            <span><i class="bi bi-check-square-fill me-2"></i> Terms And Condition</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="" class="nav-link text-white active d-flex align-items-center justify-content-between">
+                            <span><i class="bi bi-question-circle-fill me-2"></i> Help Center</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="" class="nav-link text-white active d-flex align-items-center justify-content-between">
+                            <span><i class="bi bi-ban me-2"></i>Not Found</span>
+                        </a>
+                    </li>
+                    <li>
+                        <hr class="text-light">
+                    </li>
+                    <li class="nav-item">
+                        <div class=" text-muted text-uppercase small fw-bold">FRAMEWORK</div>
+                    </li>
+                    <li class="nav-item">
+                        <a href="" class="nav-link text-white active d-flex align-items-center justify-content-between">
+                            <span><i class="bi bi-compass me-2"></i>Component</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="" class="nav-link text-white active d-flex align-items-center justify-content-between">
+                            <span><i class="bi bi-toggle-off me-2"></i>Forms</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="" class="nav-link text-white active d-flex align-items-center justify-content-between">
+                            <span><i class="bi bi-table me-2"></i>Table</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="" class="nav-link text-white active d-flex align-items-center justify-content-between">
+                            <span><i class="bi bi-tree me-2"></i>Icon</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="" class="nav-link text-white active d-flex align-items-center justify-content-between">
+                            <span><i class="bi bi-pie-chart me-2"></i>Charts</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- offcanvas -->
+    <!-- main -->
+    <main class="p-3">
+        <div class="container-fluid">
+            <div class="row justify-content-between align-items-center">
+                <div class="col-8">
+                    <h2>Dashbord</h2>
+                </div>
+                <div class="col-auto d-flex align-items-center">
+                    <select class="form-select" aria-label="Default select example">
+                        <option>07,April,2024</option>
+                        <option value="2">Two</option>
+                        <option value="3">Three</option>
+                    </select>
+                    <button class="btn btn-warning ms-2">Export</button>
+                </div>
+            </div>
+            <!-- topcards -->
+            <div class="row my-4">
+                <div class="col-md-4  mb-3">
+                    <div class="card  bg-white mb-3 h-100">
+                        <div class="card-body">
+                            <div class="d-flex align-items-center justify-content-between mb-4">
+                                <span class="lightText">Total Sells</span>
+                                <span><i class="bi bi-three-dots-vertical lightText"></i></span>
+                            </div>
+                            <div class="d-flex justify-content-between">
+                                <h2>$3799.00</h2>
+                                <div>
+                                    <div class="text-end text-success  fw-bold">
+                                        <span><i class="bi bi-arrow-up-right"></i></span>
+                                        <span>34.7%</span>
+                                    </div>
+                                    <span class="lightText">Compare to April 2024</span>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4  mb-3">
+                    <div class="card  bg-white mb-3 h-100">
+                        <div class="card-body">
+                            <div class="d-flex align-items-center justify-content-between mb-4">
+                                <span class="lightText">Average Order Value</span>
+                                <span><i class="bi bi-three-dots-vertical lightText"></i></span>
+                            </div>
+                            <div class="d-flex justify-content-between">
+                                <h2>$272.98</h2>
+                                <div>
+                                    <div class="text-end text-danger fw-bold">
+                                        <span><i class="bi bi-arrow-down-right"></i></span>
+                                        <span>12.0%</span>
+                                    </div>
+                                    <span class="lightText">Compare to April 2024</span>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4  mb-3">
+                    <div class="card  bg-white mb-3 h-100">
+                        <div class="card-body">
+                            <div class="d-flex align-items-center justify-content-between mb-4">
+                                <span class="lightText">Total Orders</span>
+                                <span><i class="bi bi-three-dots-vertical lightText"></i></span>
+                            </div>
+                            <div class="d-flex justify-content-between">
+                                <h2>$578.00</h2>
+                                <div>
+                                    <div class="text-end text-success  fw-bold">
+                                        <span><i class="bi bi-arrow-up-right"></i></span>
+                                        <span>27.9%</span>
+                                    </div>
+                                    <span class="lightText">Compare to April 2024</span>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-4 ">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="d-flex align-items-center justify-content-between mb-2">
+                                <span class="text-dark fw-bold fs-5">Active User</span>
+                                <span><i class="bi bi-three-dots-vertical lightText"></i></span>
+                            </div>
+                            <div class="fw-bold fs-1 text-center text-primary bg-info bg-gradient py-4 my-4">
+                                148
+                            </div>
+                            <div>
+                                <div class="table-responsive">
+                                    <table class="table">
+                                        <thead>
+                                            <tr>
+                                                <td>Active Pages</td>
+                                                <td class="text-end">Users</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+
+                                                <td>/products/brandix-z4</td>
+                                                <td class="text-end">15</td>
+                                            </tr>
+                                            <tr>
+
+                                                <td>/categories/drivetrain</td>
+                                                <td class="text-end">11</td>
+                                            </tr>
+                                            <tr>
+
+                                                <td>@/categories/monitors</td>
+                                                <td class="text-end">7</td>
+                                            </tr>
+                                            <tr>
+
+                                                <td>/account/orderss</td>
+                                                <td class="text-end">4</td>
+                                            </tr>
+                                            <tr>
+
+                                                <td>@/cart</td>
+                                                <td class="text-end">3</td>
+                                            </tr>
+                                            <tr>
+
+                                                <td>/checkout</td>
+                                                <td class="text-end">1</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-8">
+                    <div class="card h-100 ">
+
+                        <div class="card-body ">
+                            <div class="d-flex align-items-center justify-content-between mb-4">
+                                <span class="text-dark fw-bold fs-5">Income Statistics</span>
+                                <span><i class="bi bi-three-dots-vertical lightText"></i></span>
+                            </div>
+                            <div>
+                                <canvas id="barchart"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 mt-3">
+                    <div class="card ">
+                        <div class="card-body ">
+                            <div class="d-flex align-items-center justify-content-between mb-4">
+                                <span class="text-dark fw-bold fs-5">Recent Orders</span>
+                                <span><i class="bi bi-three-dots-vertical lightText"></i></span>
+                            </div>
+                            <div class="table-responsive-lg">
+                                <table class="table">
+                                    <thead>
+                                        <tr class="lightText">
+                                            <th scope="col">No.</th>
+                                            <th scope="col">Status</th>
+                                            <th scope="col">Customer</th>
+                                            <th scope="col">Totla</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <th scope="row" class="text-secondary">1</th>
+                                            <td class="text-info fw-bold">Pending</td>
+                                            <td>Otto</td>
+                                            <td>@mdo</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row" class="text-secondary">2</th>
+                                            <td class="text-warning fw-bold">Hold</td>
+                                            <td>Thornton</td>
+                                            <td>$2,742.00</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row" class="text-secondary">3</th>
+                                            <td class="text-warning fw-bold">Hold</td>
+                                            <td>Thornton</td>
+
+                                            <td>@twitter</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row" class="text-secondary">4</th>
+                                            <td class="text-success fw-bold">Completed</td>
+                                            <td>Thornton</td>
+
+                                            <td>@twitter</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row" class="text-secondary">5</th>
+                                            <td class="text-info fw-bold">Pending</td>
+                                            <td>Thornton</td>
+
+                                            <td>@twitter</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row" class="text-secondary">6</th>
+                                            <td class="text-warning fw-bold">Hold</td>
+                                            <td>Thornton</td>
+
+                                            <td>@twitter</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row" class="text-secondary">7</th>
+                                            <td class="text-info fw-bold">Pending</td>
+                                            <td>Thornton</td>
+
+                                            <td>@twitter</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row" class="text-secondary">8</th>
+                                            <td class="text-success fw-bold">Completed</td>
+                                            <td>Thornton</td>
+
+                                            <td>@twitter</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+                <div class="col-12 mt-3 ">
+                    <div class="card ">
+                        <div class="card-body ">
+                            <div class="d-flex align-items-center justify-content-between mb-4">
+                                <span class="text-dark fw-bold fs-5">Sales by traffic source</span>
+                                <span><i class="bi bi-three-dots-vertical lightText"></i></span>
+                            </div>
+                            <div class="row justify-content-around align-items-center ">
+                                <div class=" col-md-4 ">
+                                    <canvas id="doughnut"></canvas>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="table-responsive">
+                                        <table class="table border ">
+                                            <thead>
+                                                <tr class="text-secondary ">
+                                                    <th scope="col">Source</th>
+                                                    <th scope="col">Order</th>
+                                                    <th scope="col">Amount</th>
+
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>Yandex</td>
+                                                    <td>12</td>
+                                                    <td>$2,742.00</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>You Tube</td>
+                                                    <td>51</td>
+                                                    <td>$2,742.00</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Facebook</td>
+                                                    <td>4</td>
+                                                    <td>$2,742.00</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Instagram</td>
+                                                    <td>2</td>
+                                                    <td>$2,742.00</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Google</td>
+                                                    <td>1</td>
+                                                    <td>$2,742.00</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 mt-3">
+                    <div class="card ">
+                        <div class="card-body ">
+                            <div class="d-flex align-items-center justify-content-between mb-4">
+                                <span class="text-dark fw-bold fs-5">Recent Activity</span>
+                                <span><i class="bi bi-three-dots-vertical lightText"></i></span>
+                            </div>
+                            <section class="py-2">
+                                <ul class="timeline">
+                                    <li class="timeline-item mb-4">
+                                        <h6 class="text-secondary">Yesterday</h6>
+                                        <p class="text-dark">
+                                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit
+                                            necessitatibus adipisci, ad alias, voluptate pariatur officia
+                                            repellendus repellat inventore fugit perferendis totam dolor
+                                            voluptas et corrupti distinctio maxime corporis optio?
+                                        </p>
+                                    </li>
+
+                                    <li class="timeline-item mb-4">
+                                        <h6 class="text-secondary">5 days ago</h6>
+                                        <p class="text-dark">
+                                            Phasellus id mattis nulla. Mauris velit nisi, imperdiet vitae sodales in,
+                                            maximus ut lectus. Vivamus commodo scelerisque
+                                            lacus, at porttitor dui iaculis id.
+                                        </p>
+                                    </li>
+
+                                    <li class="timeline-item mb-4">
+                                        <h6 class="text-secondary">March 27</h6>
+                                        <p class="text-dark">
+                                            Orci varius natoque penatibus et magnis dis parturient montes,
+                                            nascetur ridiculus mus. Nulla ullamcorper arcu lacus, maximus
+                                            facilisis erat pellentesque nec. Duis et dui maximus dui aliquam
+                                            convallis. Quisque consectetur purus erat, et ullamcorper sapien
+                                            tincidunt vitae.
+                                        </p>
+                                    </li>
+
+                                    <li class="timeline-item mb-4">
+                                        <h6 class="text-secondary">November 30</h6>
+                                        <p class="text-dark">
+                                            Nulla ac tellus convallis, pulvinar nulla ac, fermentum diam. Sed
+                                            et urna sit amet massa dapibus tristique non finibus ligula. Nam
+                                            pharetra libero nibh, id feugiat tortor rhoncus vitae. Ut suscipit
+                                            vulputate mattis.
+                                        </p>
+                                    </li>
+                                </ul>
+                            </section>
+                        </div>
+                    </div>
+
+                </div>
+                <!-- topcards end -->
+            </div>
+    </main>
+    <!-- main -->
+
+    <!-- footer  -->
+    <footer class="bg-dark text-white mt-auto py-3 ">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-6">
+                    <p class="mb-0">&copy; 2024 @Sanchit thapliyal. All rights reserved.</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <a href="#" class="text-white me-3">Privacy Policy</a>
+                    <a href="#" class="text-white me-3">Terms of Service</a>
+                    <a href="#" class="text-white">Contact Us</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="chart.js"></script>
+</body>
+
+</html>

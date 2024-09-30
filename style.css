@@ -1,0 +1,146 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+}
+
+a {
+    text-decoration: none;
+}
+
+@media (max-width:992px) {
+    #searchForm {
+        width: 100% !important;
+    }
+}
+
+
+@media (min-width:992px) {
+    .sidebar {
+        visibility: visible !important;
+        transform: none !important;
+        position: absolute !important;
+        top: 72px !important;
+        height: calc(100% - 72px);
+        border-right: none !important;
+        width: 265px !important;
+    }
+}
+
+.collapseSidebar {
+    width: 75px !important;
+    text-align: center;
+}
+
+@media (max-width:992px) {
+    .sidebar {
+        width: 265px !important;
+    }
+
+
+}
+
+#adminLogo {
+    width: 21%;
+}
+
+.sidebar::-webkit-scrollbar {
+    display: none;
+}
+
+main {
+    position: relative;
+    top: 72px;
+    margin-left: 270px;
+}
+
+@media (max-width:992px) {
+    main {
+        margin-left: 0;
+    }
+}
+
+.app-footer {
+    position: relative;
+    margin-left: 270px;
+}
+
+@media (max-width:992px) {
+    .app-footer {
+        margin-left: 0;
+    }
+}
+
+.lightText {
+    color: #828f99;
+    font-weight: 500;
+}
+
+/* timeline */
+.timeline {
+    border-left: 1px solid hsl(0, 0%, 90%);
+    position: relative;
+    list-style: none;
+}
+
+.timeline .timeline-item {
+    position: relative;
+}
+
+.timeline .timeline-item:after {
+    position: absolute;
+    display: block;
+    top: 0;
+}
+
+.timeline .timeline-item:after {
+    background-color: yellow;
+    left: -38px;
+    border-radius: 50%;
+    height: 11px;
+    width: 11px;
+    content: "";
+}
+
+.divider::before {
+    content: "";
+    height: 1px;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.127);
+    display: block;
+}
+
+.divider div {
+    left: 35%;
+    line-height: 2px;
+    font-size: 12px;
+    padding: 0px 5px;
+    color: #828f99;
+}
+
+.container-width {
+    max-width: 22rem !important;
+}
+
+.sidebarText {
+    opacity: 0;
+}
+
+footer {
+    position: relative;
+    bottom: 0;
+    margin-left: 265px;
+}
+
+@media (max-width:992px) {
+    footer {
+        margin-left: 0;
+        text-align: center;
+    }
+}

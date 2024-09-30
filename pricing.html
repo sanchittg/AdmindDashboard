@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <title>Admin Dashbord Template</title>
+</head>
+
+<body class="bg-light">
+    <!-- navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark p-0 fixed-top">
+        <div class="container-fluid">
+            <!-- offcanvasTriggerbtn -->
+            <button class="btn d-lg-none fs-4 " type="button" data-bs-toggle="offcanvas"
+                data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <!-- offcanvasTriggerbtn -->
+            <a class="navbar-brand fw-bold text-info " id="adminLogo" href="#">Admin Dashbord</a>
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="bi bi-search"></span>
+            </button>
+            <div class="collapse navbar-collapse " id="navbarSupportedContent">
+
+                <form class="d-flex -auto my-lg-2 mt-2 w-50" id="searchForm">
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="search..." aria-label="search..."
+                            aria-describedby="basic-addon2">
+                        <span class="input-group-text bg-info" id="basic-addon2"><i class="bi bi-search"></i></span>
+                    </div>
+                </form>
+                <ul class="navbar-nav align-items-lg-center align-items-center flex-row ms-auto my-lg-2 mt-2">
+
+                    <li class="nav-item mx-2">
+                        <a class="nav-link active" aria-current="page" href="#"><img src="./images/location.png" alt=""
+                                class="img-fluid" width="40px"></a>
+                    </li>
+                    <li class="nav-item mx-2">
+                        <a class="nav-link active" aria-current="page" href="#"><i
+                                class="bi bi-bell-fill fs-4 text-info"></i></a>
+                    </li>
+                    <li class="nav-item mx-2">
+                        <a class="nav-link active" aria-current="page" href="#"><i
+                                class="bi bi-person-square fs-4 text-info"></i></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- navbar -->
+    <!-- offcanvas -->
+    <div class="offcanvas offcanvas-start bg-dark  position-fixed start-0 sidebar" tabindex="-1" id="offcanvasExample"
+        aria-labelledby="offcanvasExampleLabel">
+        <div class="offcanvas-header d-lg-none ">
+            <i class="bi bi-x-lg text-light ms-auto" type="button" class=" d-lg-none" data-bs-dismiss="offcanvas"></i>
+
+        </div>
+        <div class="offcanvas-body " style="scrollbar-width: none;">
+            <div>
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <div class="text-muted  text-uppercase small fw-bold">APPLICATION</div>
+                    </li>
+                    <li class="nav-item">
+                        <a href="" class="nav-link text-white  active">
+                            <span><i class="bi bi-speedometer2 me-2"></i> Dashbord</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="" class="nav-link text-white active d-flex align-items-center justify-content-between"
+                            type="button" data-bs-toggle="collapse" data-bs-target="#catalogcollapse"
+                            aria-expanded="false" aria-controls="catalogcollapse">
+                            <span><i class="bi bi-stack me-2"></i> Catalog</span>
+                            <span><i class="bi bi-caret-down-fill text-white "></i></span>
+                        </a>
+                    </li>
+                    <div class="collapse" id="catalogcollapse">
+                        <ul class="navbar-nav">
+                            <li>
+                                <a href="" class="dropdown-item text-white ms-2">
+                                    Product List
+                                </a>
+                            </li>
+                            <li>
+                                <a href="" class="dropdown-item text-white ms-2">
+                                    Categories List
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <li class="nav-item">
+                        <a href="" class="nav-link text-white active d-flex align-items-center justify-content-between"
+                            type="button" data-bs-toggle="collapse" data-bs-target="#cstomerscollapse"
+                            aria-expanded="false" aria-controls="collapseExample">
+                            <span><i class="bi bi-person me-2"></i> Customers</span>
+                            <span><i class="bi bi-caret-down-fill text-white "></i></span>
+                        </a>
+                    </li>
+                    <div class="collapse" id="cstomerscollapse">
+                        <ul class="navbar-nav">
+
+                            <li>
+                                <a href="" class="dropdown-item text-white ms-2">
+                                    Customers List
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <li class="nav-item">
+                        <a href="" class="nav-link text-white active d-flex align-items-center justify-content-between"
+                            type="button" data-bs-toggle="collapse" data-bs-target="#Orderscollapse"
+                            aria-expanded="false" aria-controls="Orderscollapse">
+                            <span><i class="bi bi-cart2 me-2"></i> Orders</span>
+                            <span id="dropdown"><i class="bi bi-caret-down-fill text-white"></i></span>
+                        </a>
+                    </li>
+                    <div class="collapse" id="Orderscollapse">
+                        <ul class="navbar-nav">
+                            <li>
+                                <a href="" class="dropdown-item text-white ms-2">
+                                    Order List
+                                </a>
+                            </li>
+                            <li>
+                                <a href="" class="dropdown-item text-white ms-2">
+                                    Order Details
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <li class="nav-item">
+                        <a href="" class="nav-link text-white active d-flex align-items-center justify-content-between">
+                            <span><i class="bi bi-envelope me-2"></i> Inbox</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="" class="nav-link text-white active d-flex align-items-center justify-content-between">
+                            <span><i class="bi bi-chat me-2"></i> Chat</span>
+                            <span class=" btn btn-warning py-0 text-white">8</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="" class="nav-link text-white active d-flex align-items-center justify-content-between">
+                            <span><i class="bi bi-calendar3 me-2"></i> Calender</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="" class="nav-link text-white active d-flex align-items-center justify-content-between">
+                            <span><i class="bi bi-bar-chart me-2"></i> Analytics</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="" class="nav-link text-white active d-flex align-items-center justify-content-between">
+                            <span><i class="bi bi-gear me-2"></i> Setting</span>
+                        </a>
+                    </li>
+                    <li>
+                        <hr class="text-light">
+                    </li>
+                    <li class="nav-item">
+                        <div class=" text-muted text-uppercase small fw-bold">PAGES</div>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="" class="nav-link text-white active d-flex align-items-center justify-content-between"
+                            type="button" data-bs-toggle="collapse" data-bs-target="#Authenticationcollapse"
+                            aria-expanded="false" aria-controls="Authenticationcollapse">
+                            <span><i class="bi bi-lock-fill me-2"></i> Authentication</span>
+                            <span><i class="bi bi-caret-down-fill text-white "></i></span>
+                        </a>
+                    </li>
+                    <div class="collapse" id="Authenticationcollapse">
+                        <ul class="navbar-nav">
+                            <li>
+                                <a href="SignIn.html" class="dropdown-item text-white ms-2">
+                                    Sign In
+                                </a>
+                            </li>
+                            <li>
+                                <a href="SignUp.html" class="dropdown-item text-white ms-2">
+                                    Sign Up
+                                </a>
+                            </li>
+                            <li>
+                                <a href="forgotPassword.html" class="dropdown-item text-white ms-2">
+                                    Forgot Password
+                                </a>
+                            </li>
+                            <li>
+                                <a href="" class="dropdown-item text-white ms-2">
+                                    Reset Password
+                                </a>
+                            </li>
+                            <li>
+                                <a href="" class="dropdown-item text-white ms-2">
+                                    Verify Account
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <li class="nav-item">
+                        <a href="" class="nav-link text-white active d-flex align-items-center justify-content-between">
+                            <span><i class="bi bi-receipt me-2"></i> Invoice</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="" class="nav-link text-white active d-flex align-items-center justify-content-between">
+                            <span><i class="bi bi-currency-rupee me-2"></i> Pricing Table</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="" class="nav-link text-white active d-flex align-items-center justify-content-between">
+                            <span><i class="bi bi-exclamation-circle me-2"></i> FAQ</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="" class="nav-link text-white active d-flex align-items-center justify-content-between">
+                            <span><i class="bi bi-check-square-fill me-2"></i> Terms And Condition</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="" class="nav-link text-white active d-flex align-items-center justify-content-between">
+                            <span><i class="bi bi-question-circle-fill me-2"></i> Help Center</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="" class="nav-link text-white active d-flex align-items-center justify-content-between">
+                            <span><i class="bi bi-ban me-2"></i>Not Found</span>
+                        </a>
+                    </li>
+                    <li>
+                        <hr class="text-light">
+                    </li>
+                    <li class="nav-item">
+                        <div class=" text-muted text-uppercase small fw-bold">FRAMEWORK</div>
+                    </li>
+                    <li class="nav-item">
+                        <a href="" class="nav-link text-white active d-flex align-items-center justify-content-between">
+                            <span><i class="bi bi-compass me-2"></i>Component</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="" class="nav-link text-white active d-flex align-items-center justify-content-between">
+                            <span><i class="bi bi-toggle-off me-2"></i>Forms</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="" class="nav-link text-white active d-flex align-items-center justify-content-between">
+                            <span><i class="bi bi-table me-2"></i>Table</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="" class="nav-link text-white active d-flex align-items-center justify-content-between">
+                            <span><i class="bi bi-tree me-2"></i>Icon</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="" class="nav-link text-white active d-flex align-items-center justify-content-between">
+                            <span><i class="bi bi-pie-chart me-2"></i>Charts</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- offcanvas -->
+    <main class="p-5">
+        <div class="container-fluid">
+            <div class="text-center">
+                <div>
+                    <h1 class="fw-bold ">Choose Your Plan</h1>
+                </div>
+                <div>
+                    <p class="lightText ">Choose the features and functionality your team needs today.<br>
+                        Easily upgrade as your company grows.
+                    </p>
+                </div>
+            </div>
+            <div class="row flex-column align-items-center flex-lg-row my-5">
+                <div class="col-12 col-lg-4 container-width my-3">
+                    <div class="card ">
+                        <div class="card-body text-center ">
+                            <h5 class="card-title">Starter</h5>
+                            <h6 class="card-subtitle mb-2 text-muted">For exploring the platform</h6>
+                            <div class="card-text d-flex align-items-center justify-content-center">
+                                <div>
+                                    <h1>$0</h1>
+                                </div>
+                                <div>
+                                    /Month
+                                </div>
+                            </div>
+                            <div class="my-3">
+                                <button class="btn btn-warning"><a href="#" class="nav-link text-dark fw-bold p-0">Get
+                                        Started</a>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="divider d-flex align-items-center mt-1 mb-3">
+                            <div class="bg-white position-absolute small text-uppercase">Plan Include</div>
+                        </div>
+                        <div class="card-body">
+                            <ul class="list-group">
+                                <li class="list-group-item border-0 d-flex align-items-center">
+                                    <i class="bi bi-check-circle me-2"></i>
+                                    <span><strong>10</strong> Products</span>
+                                </li>
+                                <li class="list-group-item border-0 d-flex align-items-center">
+                                    <i class="bi bi-check-circle me-2"></i>
+                                    <span><strong>10</strong> 1 Team Members</span>
+                                </li>
+                                <li class="list-group-item border-0 d-flex align-items-center">
+                                    <i class="bi bi-check-circle me-2"></i>
+                                    <span><strong>10</strong> 50MB Disk Spaces</span>
+                                </li>
+                                <li class="list-group-item border-0 d-flex align-items-center">
+                                    <i class="bi bi-check-circle me-2"></i>
+                                    <span><strong>10</strong> 24/7 support</span>
+                                </li>
+                                <li class="list-group-item border-0 d-flex align-items-center">
+                                    <i class="bi bi-check-circle me-2"></i>
+                                    <span><strong>10</strong> Theme Editor</span>
+                                </li>
+                                <li class="list-group-item border-0 d-flex align-items-center">
+                                    <i class="bi bi-check-circle me-2"></i>
+                                    <span><strong>10</strong> Personal Manager</span>
+                                </li>
+                            </ul>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-lg-4 container-width my-3">
+                    <div class="card ">
+                        <div class="card-body text-center ">
+                            <h5 class="card-title">Starter</h5>
+                            <h6 class="card-subtitle mb-2 text-muted">For exploring the platform</h6>
+                            <div class="card-text d-flex align-items-center justify-content-center">
+                                <div>
+                                    <h1>$0</h1>
+                                </div>
+                                <div>
+                                    /Month
+                                </div>
+                            </div>
+                            <div class="my-3">
+                                <button class="btn btn-warning"><a href="#" class="nav-link text-dark fw-bold p-0">Get
+                                        Started</a>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="divider d-flex align-items-center mt-1 mb-3">
+                            <div class="bg-white position-absolute small text-uppercase">Plan Include</div>
+                        </div>
+                        <div class="card-body">
+                            <ul class="list-group">
+                                <li class="list-group-item border-0 d-flex align-items-center">
+                                    <i class="bi bi-check-circle me-2"></i>
+                                    <span><strong>10</strong> Products</span>
+                                </li>
+                                <li class="list-group-item border-0 d-flex align-items-center">
+                                    <i class="bi bi-check-circle me-2"></i>
+                                    <span><strong>10</strong> 1 Team Members</span>
+                                </li>
+                                <li class="list-group-item border-0 d-flex align-items-center">
+                                    <i class="bi bi-check-circle me-2"></i>
+                                    <span><strong>10</strong> 50MB Disk Spaces</span>
+                                </li>
+                                <li class="list-group-item border-0 d-flex align-items-center">
+                                    <i class="bi bi-check-circle me-2"></i>
+                                    <span><strong>10</strong> 24/7 support</span>
+                                </li>
+                                <li class="list-group-item border-0 d-flex align-items-center">
+                                    <i class="bi bi-check-circle me-2"></i>
+                                    <span><strong>10</strong> Theme Editor</span>
+                                </li>
+                                <li class="list-group-item border-0 d-flex align-items-center">
+                                    <i class="bi bi-check-circle me-2"></i>
+                                    <span><strong>10</strong> Personal Manager</span>
+                                </li>
+                            </ul>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-lg-4 container-width my-3">
+                    <div class="card ">
+                        <div class="card-body text-center ">
+                            <h5 class="card-title">Starter</h5>
+                            <h6 class="card-subtitle mb-2 text-muted">For exploring the platform</h6>
+                            <div class="card-text d-flex align-items-center justify-content-center">
+                                <div>
+                                    <h1>$0</h1>
+                                </div>
+                                <div>
+                                    /Month
+                                </div>
+                            </div>
+                            <div class="my-3">
+                                <button class="btn btn-warning"><a href="#" class="nav-link text-dark fw-bold p-0">Get
+                                        Started</a>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="divider d-flex align-items-center mt-1 mb-3">
+                            <div class="bg-white position-absolute small text-uppercase">Plan Include</div>
+                        </div>
+                        <div class="card-body">
+                            <ul class="list-group">
+                                <li class="list-group-item border-0 d-flex align-items-center">
+                                    <i class="bi bi-check-circle me-2"></i>
+                                    <span><strong>10</strong> Products</span>
+                                </li>
+                                <li class="list-group-item border-0 d-flex align-items-center">
+                                    <i class="bi bi-check-circle me-2"></i>
+                                    <span><strong>10</strong> 1 Team Members</span>
+                                </li>
+                                <li class="list-group-item border-0 d-flex align-items-center">
+                                    <i class="bi bi-check-circle me-2"></i>
+                                    <span><strong>10</strong> 50MB Disk Spaces</span>
+                                </li>
+                                <li class="list-group-item border-0 d-flex align-items-center">
+                                    <i class="bi bi-check-circle me-2"></i>
+                                    <span><strong>10</strong> 24/7 support</span>
+                                </li>
+                                <li class="list-group-item border-0 d-flex align-items-center">
+                                    <i class="bi bi-check-circle me-2"></i>
+                                    <span><strong>10</strong> Theme Editor</span>
+                                </li>
+                                <li class="list-group-item border-0 d-flex align-items-center">
+                                    <i class="bi bi-check-circle me-2"></i>
+                                    <span><strong>10</strong> Personal Manager</span>
+                                </li>
+                            </ul>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </main>
+    <div class="app-footer">
+        <hr class="text-secondary">
+        <div class="d-flex alias justify-content-between text-secondary">
+            <div>Stroyka Admin — eCommerce Dashboard Template © 2024</div>
+            <div>Powered by HTML — Design by Sanchit</div>
+        </div>
+
+    </div>
+</body>
+
+</html>
